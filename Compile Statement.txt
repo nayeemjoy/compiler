@@ -1,0 +1,2 @@
+mingw32-g++ -c lex.yy.c -o lex.yy.o
+mingw32-gcc -o lex.yy.exe lex.yy.o
