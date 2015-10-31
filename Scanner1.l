@@ -12,8 +12,8 @@ FLOAT [1-9]{DIGIT}+.{DIGIT}+
 ^\n {
 	printf("Line Number : %d\n", ++line_num);
 }
-[\t\r]+ ;
-(<|>|<=|>=|==) {
+[ \t\r]+ ;
+(<|>|<=|>=|==|\+|-|\*|\/) {
 	printf("OPERATOR\n");
 }
 (if|else|switch|case|while|for) {
@@ -39,7 +39,6 @@ FLOAT [1-9]{DIGIT}+.{DIGIT}+
 
 . {
 	printf("NOT RECOGNIZED\n");
-	
 };
 %%
 int yywrap(){
